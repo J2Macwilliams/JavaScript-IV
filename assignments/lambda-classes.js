@@ -24,7 +24,7 @@ class Instructor extends Person{
         return `${student.name} receives a perfect score on ${subject}.`
     }
     score(student, subject){
-        
+
     }
 }//closes the Instructor
 
@@ -37,7 +37,7 @@ class Student extends Person{
         this.grade = studentAttrs.grade;
     }
     listsSubjects(){
-        return console.log(this.FavSubjects);
+        return `${this.favSubjects}`;
     }
     prAssignmnet(subject){
         return `${this.name} has submitted a PR for ${subject}.`
@@ -134,7 +134,7 @@ const fred = new Project_Manager({
     age: 37,
     favLanguage: 'JavaScript',
     specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`,
+    catchPhrase: `Yabba Dabba Doo!`,
     gradClassName: 'Stone-Age 570',
     favInstructor: 'Barney Rubble'
   });
@@ -152,4 +152,16 @@ const fred = new Project_Manager({
 
 
 
-  console.log(fred.debugsCode(Jeremy, 'Javascript'));
+  
+  
+  console.log(marty.demo('English'));
+  console.log(doc.grade(huey, 'Javascript'));
+  console.log(george.catchPhrase);
+  console.log(jeremy.listsSubjects());
+  console.log(huey.prAssignmnet('CSS'));
+  console.log(dewey.sprintChallenge('Javascript'));
+  console.log(louie.favSubjects);
+  console.log(fred.debugsCode(jeremy, 'Javascript'));
+  console.log(fred.catchPhrase);
+  console.log(wilma.standUp('Web24_Wilma'));
+  
