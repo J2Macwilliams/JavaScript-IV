@@ -23,8 +23,18 @@ class Instructor extends Person{
     grade(student, subject){
         return `${student.name} receives a perfect score on ${subject}.`
     }
-    score(student, subject){
-
+    score(student){
+        let random_sign = -1 + Math.round(Math.random()) * 2;  
+         let result = ((random_sign * 1) * (Math.floor(Math.random() * 10)));
+         return student.grade = (student.grade + result);
+         
+    }
+    graduate(student){
+        if (student.grade > 69){
+            return `${student.name} is ${student.grade}% , let them graduate!`
+        }else{
+            `${student.name} is below passing. Continue to study.`
+        }
     }
 }//closes the Instructor
 
@@ -97,7 +107,7 @@ const jeremy = new Student({
     previousBackground: 'Restaurant Hospitality',
     className:'Web24',
     favSubjects:'CSS',
-    grade: 93,
+    grade: 89 ,
 })
 const huey = new Student({
     name:'Huey',
@@ -106,7 +116,7 @@ const huey = new Student({
     previousBackground: 'Following Treasure Maps',
     className:'Web22',
     favSubjects:'JavaScript',
-    grade: 96,
+    grade: 85,
 })
 const dewey = new Student({
     name:'Dewey',
@@ -115,7 +125,7 @@ const dewey = new Student({
     previousBackground: 'Feats of Strenght',
     className:'Web26',
     favSubjects:'React',
-    grade: 85,
+    grade: 65,
 })
 const louie = new Student({
     name:'Louie',
@@ -124,7 +134,7 @@ const louie = new Student({
     previousBackground: 'Stand-Up',
     className:'Web23',
     favSubjects:'JavaScript',
-    grade: 78,
+    grade: 73,
 })
 
 //Project Managers
@@ -164,4 +174,8 @@ const fred = new Project_Manager({
   console.log(fred.debugsCode(jeremy, 'Javascript'));
   console.log(fred.catchPhrase);
   console.log(wilma.standUp('Web24_Wilma'));
-  
+  console.log(marty.score(jeremy));
+  console.log(george.score(jeremy));
+  console.log(george.score(louie));
+  console.log(marty.graduate(louie));
+
