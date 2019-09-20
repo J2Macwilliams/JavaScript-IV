@@ -33,7 +33,7 @@ class Instructor extends Person{
         if (student.grade > 69){
             return `${student.name} is ${student.grade}% , let them graduate!`
         }else{
-            `${student.name} is below passing. Continue to study.`
+           return `${student.name} is below passing. Continue to study.`
         }
     }
 }//closes the Instructor
@@ -125,7 +125,7 @@ const dewey = new Student({
     previousBackground: 'Feats of Strenght',
     className:'Web26',
     favSubjects:'React',
-    grade: 65,
+    grade: 70,
 })
 const louie = new Student({
     name:'Louie',
@@ -176,6 +176,10 @@ const fred = new Project_Manager({
   console.log(wilma.standUp('Web24_Wilma'));
   console.log(marty.score(jeremy));
   console.log(george.score(jeremy));
+  console.log(doc.graduate(jeremy));
+  console.log(marty.score(huey));
+  console.log(george.score(dewey));
+  console.log(doc.graduate(dewey));
   console.log(george.score(louie));
   console.log(marty.graduate(louie));
 
